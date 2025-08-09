@@ -1,30 +1,39 @@
+package com.devsenior.module2.java.app;
+
+import com.devsenior.module2.java.config.WeekDay;
+import com.devsenior.module2.java.model.security.User;
+import com.devsenior.module2.java.model.security.UserRole;
+
 public class App {
     public static void main(String[] args) throws Exception {
+        //demoWeekDay();
         demoUser();
-        }
+        System.out.println(false);
+ }
+        
     private static void demoUser() {
-        var cesar = new User("Cesae", "cesar@gmail.com", "123456", null, UserRole.ADMIN);
-        var jose = new User("Jose", "jose@email.com", "1234566")x;
+        var cesar = new User("Cesar", "cesar@gmail.com", "123456", true, UserRole.ADMIN);
+        var jose = new User("Jose", "jose@email.com", "1234566");
         var userArray = new User[] {cesar, jose};
 
         for (int i = 0; i < userArray.length; i++) {
             var user = userArray[i];
            switch (user.getRole()) {
             case ADMIN:
-                System.out.printf("%s es el superusuario", user);
+                System.out.printf("%s es el superusuario%n", user);
                 break;
             case CLIENT:
-                System.out.printf("%s es el cliente preferido", user);
+                System.out.printf("%s es el cliente preferido%n", user);
                 break;
             case PROVIDER:
-                System.out.printf("%s es mi proveedor por defec", user);
+                System.out.printf("%s es mi proveedor por defecto%n", user);
                 break;
             case EMPLOYEE:
-                System.out.printf("%s es un empleado", user);
+                System.out.printf("%s no estas trabajando%n", user);
                 break;
             case USER:
-                System.out.printf("%s es un usuario", user);
-                break; 
+                System.out.printf("%s que haces aqui%n", user);
+                break;
             }
         }
     }

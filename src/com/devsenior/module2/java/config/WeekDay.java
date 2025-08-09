@@ -1,3 +1,5 @@
+package com.devsenior.module2.java.config;
+
 public enum WeekDay {
     MONDAY(1, "lunes"), 
     TUESDAY(2, "Martes"), 
